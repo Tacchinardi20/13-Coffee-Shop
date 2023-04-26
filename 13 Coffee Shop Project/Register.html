@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        const getData =() => {
+            // Gettting the Values
+            let getUser = [{
+                Username : document.getElementById("username").value,
+                Password : document.getElementById("password").value,
+                Email : document.getElementById("email").value,
+                First_Name : document.getElementById("firstname").value,
+                Last_Name : document.getElementById("lastname").value
+            }];
+
+            // Saving the Values in LocalStorage
+            localStorage.setItem('userList', JSON.stringify(getUser));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Prin's Coffee</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_parent">Home</a></li>
+            <li><a href="Coffee.html" target="_parent">Coffee</a></li>
+            <li><a href="Cake.html" target="_parent">Cake</a></li>
+            <li><a href="Smoothie.html" target="_parent">Smoothie</a></li>
+            <li><a href="Contact Us.html" target="_parent">Contact Us</a></li>
+            <li id="login"><a href="login.html">Login</a></li>
+            <li id="register"><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h1>Register</h1>
+    <br>
+    <form method="get" action="Register Confirm.html">
+        <table id="customers">
+            <tr>
+                <td>Username</td>
+                <td><input id="username" type="text" size="30"></td>
+            </tr>
+
+            <tr>
+                <td>Password&nbsp;(Minimum of 8 Characters)</td>
+                <td><input id="password" type="password" minlength="8" size="30" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" size="30" required></td>
+            </tr>
+
+            <tr>
+                <td>First Name</td>
+                <td><input id="firstname" type="firstname" size="30" required></td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input id="lastname" type="lastname" size="30" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div class="span">
+                        <button class="button" type="submit" onclick="getData()">Register</button>&nbsp;&nbsp;||&nbsp;
+                        <button class="button" type="reset">Clear</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br><br>
+    <footer>&copy; &nbsp;Copyright by Prin's Coffee 2021 All Rights Reserved</footer>
+</body>
+</html>
