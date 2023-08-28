@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Itim', cursive;
 }
+
 header {
     color: white;
     background-color: #4B1F0E;
@@ -12,11 +14,13 @@ header {
     padding: 4px;
     border-radius: 6px;
 }
+
 h1 {
     font-style: italic;
     font-weight: bold;
     text-align: center;
 }
+
 /* Create Two Columns / Boxes that Float Next to Each Other */
 ul {
     background-color: #0E0504;
@@ -27,9 +31,11 @@ ul {
     list-style-type: none;
     overflow: hidden;
 }
+
 li {
     float: left;
 }
+
 li a {
     color: white;
     text-align: center;
@@ -37,9 +43,11 @@ li a {
     padding: 16px;
     display: block;
 }
+
 li a:hover {
     background-color: #242323;
 }
+
 .product {
     width: 80%;
     max-width: 600px;
@@ -48,28 +56,34 @@ li a:hover {
     border: 4px dotted #bbb; /* Dotted Border */
     border-radius: 14px; /* Rounded Border */
 }
+
 img {
     box-shadow: 10px 10px 5px grey;
 }
+
 .picshow {
     text-align: center;
     margin: 14px 0px 14px 0px;
 }
+
 .container {
     background-color: #f1f1f1;
     text-align: center;
     padding: 6px 20px;
     border-radius: 8px;
 }
+
 .submenu {
     font-family: 'Itim', cursive;
     font-weight: bold;
     text-align: center;
     padding: 20px 0px 12px 0px;
 }
+
 .submenu a {
     text-decoration: none;
 }
+
 .promo {
     background-color: #ccc;
     font-size: 18px;
@@ -77,6 +91,7 @@ img {
     font-weight: bold;
     padding: 2px;
 }
+
 footer {
     color: #fff;
     background-color: #4B1F0E;
@@ -89,13 +104,16 @@ footer {
     margin-top: 20px;
     position: absolute;
 }
+
 /* -------------- Code Text Advertisement -------------- */
+
 /* (A) Standard Row Height */
 .vwrap, .vitem {
     font-size: 20px;
     height: 30px;
     line-height: 30px;
 }
+
 /* (B) Fixed Wrapper */
 .vwrap {
     background-color: antiquewhite;
@@ -103,15 +121,18 @@ footer {
     border-radius: 6px;
     overflow: hidden; /* Hide Scroll Bar */
 }
+
 /* (C) Ticker Items */
 .vitem {
     text-align: center;
 }
+
 /* (D) Animation - Move Items from Top to Bottom */
 /* Change Keyframes If You Add/Remove Items */
 .vmove {
     position: relative;
 }
+
 @keyframes tickerv {
     0% { bottom: 0; } /* FIRST ITEM */
     30% { bottom: 30px; } /* SECOND ITEM */
@@ -119,39 +140,48 @@ footer {
     90% { bottom: 90px; } /* FORTH ITEM */
     100% { bottom: 0; } /* BACK TO FIRST */
 }
+
 .vmove {
     animation-name: tickerv;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(1, 0, .5, 0);
 }
+
 .vmove:hover {
     animation-play-state: paused;
 }
+
 /* -------------- End Text Advertisement -------------- */
 #login, #register {
     float: right;
     flex-direction: row-reverse;
 }
+
 #customers {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     border: 1px solid;
     border-collapse: collapse;
 }
+
 #customers tr, #customers td {
     padding: 10px;
     border: 1px solid azure;
 }
+
 #customers tr:nth-child(even) {
     background-color: antiquewhite;
 }
+
 #customers tr:hover {
     background-color: azure;
 }
+
 .span {
     text-align: center;
 }
+
 .button {
     font-size: 20px;
     color: white;
@@ -169,12 +199,14 @@ footer {
     cursor: pointer;
     transition: all 0.5s;
 }
+
 .button span {
     position: relative;
     display: inline-block;
     cursor: pointer;
     transition: 0.5s;
 }
+
 .button span:after {
     top: 0;
     right: -20px;
@@ -183,13 +215,16 @@ footer {
     position: absolute;
     transition: 0.5s;
 }
+
 .button:hover span {
     padding-right: 25px;
 }
+
 .button:hover span:after {
     right: 0;
     opacity: 1;
 }
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -197,6 +232,7 @@ footer {
         height: auto;
     }
 }
+
 article, aside {
     align-items: center;
     text-align: center;
